@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/card_view_width"
+    android:layout_height="@dimen/card_view_height"
+    android:layout_margin="@dimen/marginMid">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/cardViewHalfHeight"
+        android:background="@drawable/gradient_primary_secondary" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/productImageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:padding="@dimen/marginSmall"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/circularImageView"
+            tools:src="@mipmap/ic_donuts" />
+
+        <TextView
+            android:id="@+id/productNameTextView"
+            style="@style/TextAppearance.Material3.DisplayLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/space_grotesk_bold"
+            android:maxLines="1"
+            android:textAlignment="center"
+            android:textSize="@dimen/textMid"
+            tools:text="Donut" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</com.google.android.material.card.MaterialCardView>

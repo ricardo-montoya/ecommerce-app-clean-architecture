@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/imageCardView"
+        android:layout_width="@dimen/cardViewHalfHeight"
+        android:layout_marginVertical="@dimen/marginMid"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="@dimen/cardViewHalfHeight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/productImageView"
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+            android:layout_height="match_parent"
+            tools:src="@mipmap/ic_donuts"
+            android:contentDescription="@string/product_image" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/productNameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/marginMid"
+        android:layout_marginStart="@dimen/marginMid"
+        android:layout_marginEnd="35dp"
+        app:layout_constraintBottom_toTopOf="@id/productSinglePriceTextView"
+        app:layout_constraintEnd_toStartOf="@+id/priceSeparatorLine"
+        app:layout_constraintStart_toEndOf="@id/imageCardView"
+        app:layout_constraintTop_toTopOf="@id/imageCardView"
+        tools:text="@string/product_name_sample" />
+
+    <TextView
+        android:id="@+id/productSinglePriceTextView"
+        style="?attr/textAppearanceSubtitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@id/amountTextView"
+        app:layout_constraintStart_toStartOf="@id/productNameTextView"
+        app:layout_constraintTop_toBottomOf="@id/productNameTextView"
+        tools:text="$19.99" />
+
+    <TextView
+        android:id="@+id/amountTextView"
+        style="?attr/textAppearanceSubtitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/marginMid"
+        android:textColor="?attr/colorSecondary"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/priceSeparatorLine"
+        app:layout_constraintTop_toBottomOf="@id/productSinglePriceTextView"
+        tools:text="@string/x5" />
+
+
+    <TextView
+        android:id="@+id/itemTotalPriceTextView"
+        style="?attr/textAppearanceBodyLarge"
+        android:layout_width="@dimen/cardViewHalfHeight"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:textColor="?attr/colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="$199.99" />
+
+    <View
+        android:id="@+id/priceSeparatorLine"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="?attr/colorOutline"
+        android:layout_marginVertical="@dimen/marginLarge"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/itemTotalPriceTextView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="@dimen/marginLarge"
+        android:background="?attr/colorOutline"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/addToCartBottomBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:context=".ui.detail.DetailFragment">
+
+                <ImageView
+                    android:id="@+id/detailTopBackground"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/card_view_height"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/gradient_drawable"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/productImageView"
+                    android:layout_width="@dimen/detail_circular_image_diameter"
+                    android:layout_height="@dimen/detail_circular_image_diameter"
+                    android:layout_marginTop="@dimen/detail_circular_image_to_center"
+                    android:padding="@dimen/marginSmall"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.497"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/circularImageView"
+                    app:strokeColor="?attr/colorTertiary"
+                    app:strokeWidth="5dp"
+                    tools:src="@mipmap/ic_donuts" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/productNameTextView"
+                style="?attr/textAppearanceHeadline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/marginMid"
+                tools:text="Donuts" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/productPriceTextView"
+                    style="?attr/textAppearanceHeadline5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/marginMid"
+                    android:layout_weight="1"
+                    android:textColor="?attr/colorPrimary"
+                    android:textStyle="bold"
+                    tools:text="$12.99" />
+
+                <ImageView
+                    android:layout_width="@dimen/marginLarge"
+                    android:layout_height="@dimen/marginLarge"
+                    android:layout_marginVertical="@dimen/marginMid"
+                    android:layout_weight="0.5"
+                    app:tint="?attr/colorTertiary"
+                    android:src="@drawable/ic_clock" />
+
+                <TextView
+                    android:id="@+id/productPrepTimeTextView"
+                    style="?attr/textAppearanceHeadline5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="@dimen/marginMid"
+                    android:layout_weight="0.5"
+                    android:textColor="?attr/colorSecondary"
+                    android:textStyle="bold"
+                    tools:text="@string/time_tools_string" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="@dimen/marginLarge"
+                android:layout_marginVertical="2dp"
+                android:background="?attr/colorOutline"/>
+
+            <TextView
+                android:id="@+id/productDescriptionTextView"
+                style="?attr/textAppearanceBodyLarge"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/marginMid"
+                tools:text="@string/lorem_ipmus_short" />
+            <TextView
+                android:id="@+id/productVendorTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="From: Tasty Donuts"
+                android:textStyle="bold"
+                style="?attr/textAppearanceHeadline5"
+                android:textColor="?attr/colorTertiary"
+                android:layout_margin="@dimen/marginMid"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/addToCartBottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorSurface"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/qtyTextView"
+            style="?attr/textAppearanceBodyLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/marginMid"
+            android:text="@string/quantity_string"
+            android:textStyle="bold"
+            app:tint="?attr/colorTertiary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/quantityMinusButton"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="?attr/colorTertiary"
+            android:src="@drawable/ic_remove"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/qtyTextView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/quantityNumberTextView"
+            style="?attr/textAppearanceBodyLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/marginMid"
+            android:text="0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/quantityMinusButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageButton
+            android:id="@+id/quantityPlusButton"
+            android:layout_width="wrap_content"
+            app:tint="?attr/colorTertiary"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/marginMid"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/quantityNumberTextView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/addToCartButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/marginMid"
+            android:layout_marginVertical="@dimen/marginSmall"
+            android:text="@string/add_to_cart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/quantityPlusButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="?attr/colorOutline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

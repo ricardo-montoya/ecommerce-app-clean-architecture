@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/krona_one</item>
+        <item>@font/space_grotesk_bold</item>
+        <item>@font/space_grotesk_light</item>
+        <item>@font/space_grotesk_medium</item>
+    </array>
+</resources>

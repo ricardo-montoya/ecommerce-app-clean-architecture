@@ -1,0 +1,13 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="card_view_height">220dp</dimen>
+    <dimen name="card_view_width">180dp</dimen>
+    <dimen name="marginMid">16dp</dimen>
+    <dimen name="textMid">20sp</dimen>
+    <dimen name="cardViewHalfHeight">110dp</dimen>
+    <dimen name="marginLarge">32dp</dimen>
+    <dimen name="marginSmall">8dp</dimen>
+    <dimen name="detail_circular_image_diameter">300dp</dimen>
+    <dimen name="detail_circular_image_to_center">70dp</dimen>
+    <dimen name="price_text_width_cart">80dp</dimen>
+</resources>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_margin="@dimen/marginSmall"
+    android:elevation="6dp"
+    android:backgroundTint="?attr/colorSurfaceVariant"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/productImageView"
+            android:layout_width="@dimen/cardViewHalfHeight"
+            android:layout_height="@dimen/cardViewHalfHeight"
+            android:layout_margin="@dimen/marginMid"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@mipmap/ic_donuts" />
+
+        <TextView
+            android:id="@+id/productNameTextView"
+            style="?attr/textAppearanceBodyLarge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/marginMid"
+            android:maxLines="1"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/productDescriptionTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/productImageView"
+            app:layout_constraintTop_toTopOf="@id/productImageView"
+            tools:text="@string/product_name_sample" />
+
+        <TextView
+            android:id="@+id/productDescriptionTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/marginMid"
+            android:maxLines="2"
+            app:layout_constraintBottom_toTopOf="@id/clockIcon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/productImageView"
+            app:layout_constraintTop_toBottomOf="@id/productNameTextView"
+            tools:text="This is the description of the product, for the same reason this should be even longer, I don't know how long is enough but I'm good with the current one." />
+
+        <ImageView
+            android:id="@+id/clockIcon"
+            android:layout_width="@dimen/marginMid"
+            android:layout_height="@dimen/marginMid"
+            android:layout_marginStart="@dimen/marginMid"
+            android:src="@drawable/ic_clock"
+            app:layout_constraintBottom_toBottomOf="@id/productImageView"
+            app:layout_constraintStart_toEndOf="@id/productImageView"
+            app:layout_constraintTop_toBottomOf="@id/productDescriptionTextView"
+            app:tint="?attr/colorPrimary" />
+
+        <TextView
+            android:id="@+id/timeTextView"
+            style="?attr/textAppearanceSubtitle2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/colorPrimary"
+            android:textStyle="italic"
+            app:layout_constraintStart_toEndOf="@id/clockIcon"
+            app:layout_constraintTop_toTopOf="@id/clockIcon"
+            tools:text="15min" />
+
+        <TextView
+            android:id="@+id/priceTextView"
+            style="?attr/textAppearanceSubtitle2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/marginMid"
+            android:textColor="?attr/colorSecondary"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/timeTextView"
+            tools:text="$129.99" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="@dimen/marginMid"
+            android:background="?attr/colorOutline"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

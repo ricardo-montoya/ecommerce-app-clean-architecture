@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chip_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:checkedChip="@id/chip_gluten_free"
+        app:chipSpacingHorizontal="8dp"
+        app:chipSpacingVertical="8dp"
+        app:singleLine="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_gluten_free"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gluten_free"
+            app:checkedIconVisible="false"
+            app:chipBackgroundColor="?attr/colorSurface"
+            app:chipCornerRadius="16dp"
+            app:chipStrokeColor="?attr/colorOutline"
+            app:chipStrokeWidth="1dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_low_carbs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/low_carbs"
+            app:checkedIconVisible="false"
+            app:chipBackgroundColor="?attr/colorSurface"
+            app:chipCornerRadius="16dp"
+            app:chipStrokeColor="?attr/colorOutline"
+            app:chipStrokeWidth="1dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_sugar_free"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sugar_free"
+            app:checkedIconVisible="false"
+            app:chipBackgroundColor="?attr/colorSurface"
+            app:chipCornerRadius="16dp"
+            app:chipStrokeColor="?attr/colorOutline"
+            app:chipStrokeWidth="1dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_low_calories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/low_calories"
+            app:checkedIconVisible="false"
+            app:chipBackgroundColor="?attr/colorSurface"
+            app:chipCornerRadius="16dp"
+            app:chipStrokeColor="?attr/colorOutline"
+            app:chipStrokeWidth="1dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_sweet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sweet"
+            app:checkedIconVisible="false"
+            app:chipBackgroundColor="?attr/colorSurface"
+            app:chipCornerRadius="16dp"
+            app:chipStrokeColor="?attr/colorOutline"
+            app:chipStrokeWidth="1dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_salty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/salty"
+            app:checkedIconVisible="false"
+            app:chipBackgroundColor="?attr/colorSurface"
+            app:chipCornerRadius="16dp"
+            app:chipStrokeColor="?attr/colorOutline"
+            app:chipStrokeWidth="1dp" />
+    </com.google.android.material.chip.ChipGroup>
+
+</HorizontalScrollView>
